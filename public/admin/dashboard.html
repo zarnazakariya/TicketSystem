@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Admin Dashboard</title>
+
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body class="dashboard-page">
+        <div class="dashboard-layout">
+            <!-- Sidebar Component-->
+            <div id="sidebar"></div>
+            <!-- Main Area -->
+            <div class="dashboard-main">
+                <!-- Navbar Component -->
+                <div id="navbar"></div>
+                <!-- Dashboard Content -->
+                <main class="dashboard-container">
+                    <div class="welcome-section">
+                        <h1>Welcome, Admin <span id="welcomeName">User</span></h1>
+                        <p> Monitor and manage all incidents</p>
+                    </div>
+
+                    <!-- Incidents Statistics -->
+                    <div class="dashboard-section">
+                        <h2>Incident Overview</h2>
+                        <div class="dashboard-cards">
+                            <div class="dashboard-card">
+                                <h3>Total Incidents</h3>
+                                <p id="totalIncidents">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <h3>Open</h3>
+                                <p id="openIncidents">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <h3>In Progress</h3>
+                                <p id="inProgressIncidents">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <h3>Closed</h3>
+                                <p id="resolvedIncidents">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Incident Status Chart -->
+                    <div class="dashboard-section">
+                        <h2>Incident Status</h2>
+                        <div class="chart-container">
+                            <canvas id="incidentChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Recent Incidents -->
+                    <div class="dashboard-section">
+                        <h2>Recent Incidents</h2>
+                        <div class="table-container">
+                            <table class="profile-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Title</th>
+                                        <th>User</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="incidentTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../scripts/auth.js"></script>
+        <script src="../scripts/common.js"></script>
+        <script src="dashboard.js"></script>
+    </body>
+</html>

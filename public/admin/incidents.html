@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Manage Incident</title>
+
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body class="dashboard-page">
+        <div class="dashboard-layout">
+            <!-- Sidebar Component -->
+            <div id="sidebar"></div>
+            <!-- Main Area -->
+             <div class="dashboard-main">
+                <!--Navbar Component-->
+                <div id="navbar"></div>
+
+                <!-- Incident Content -->
+                 <main class="dashboard-container">
+                    <div class="welcome-section">
+                        <h1>Manage Incidents</h1>
+                        <p>View and manage all reported incidents</p>
+                    </div>
+                    <div class="dashboard-section">
+                        <h2>All incidents</h2>
+                        <div class="table-container">
+                            <table class="profile-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>User</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="incidentTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                 </main>
+             </div>
+        </div>
+        <script src="../scripts/auth.js"></script>
+        <script src="../scripts/common.js"></script>
+        <script src="incidents.js"></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>My Profile</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body class="dashboard-page">
+        <div class="dashboard-layout">
+            <!--Sidebar Component -->
+            <div id="sidebar"></div>
+            <!-- Main Area -->
+            <div class="dashboard-main">
+                <!--Navbar Component -->
+                <div id="navbar"></div>
+                <!--Profile Content -->
+                <main class="dashboard-container">
+                    <div class="welcome-section">
+                        <h1>My Profile</h1>
+                    </div>
+                    <div class="dashboard-section">
+                        <h2>Profile Information</h2>
+                        <div class="table-container">
+                            <table class="profile-table">
+                                <thead>
+                                    <tr>
+                                        <th>Information</th>
+                                        <th>Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Name</td><td id="profileName">-</td></tr>
+                                    <tr><td>Email</td><td id="profileEmail">-</td></tr>
+                                    <tr><td>Role</td><td id="profileRole">-</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+            </div>            
+        </div>
+        <script src="../scripts/auth.js"></script>
+        <script src="../scripts/common.js"></script>
+        <script src="profile.js"></script>
+    </body>
+</html>
